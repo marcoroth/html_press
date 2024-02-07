@@ -15,7 +15,7 @@ module HtmlPress
     HtmlPress::Html.new(options).press text
   end
 
-  def self.js_compressor (text, options = nil)
+  def self.js_compressor(text, options = nil)
     options ||= {}
     options[:output] ||= {}
     options[:output][:inline_script] = true

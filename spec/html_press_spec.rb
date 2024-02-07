@@ -4,9 +4,11 @@ require File.expand_path("../lib/html_press", File.dirname(__FILE__))
 
 class LoggerStub
   attr_accessor :errors
+
   def initialize
     @errors = []
   end
+
   def error text
     @errors.push text
   end

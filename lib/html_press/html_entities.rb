@@ -12,10 +12,10 @@ module HtmlPress
       '%' + @replacement_hash + '%' + (@placeholders.size - 1).to_s + '%'
     end
 
-    def minify text
+    def minify(text)
       out = text.dup
 
-      out.gsub! /&lt;|&#60;|&gt;|&#62;|&amp;|&#38;/ do |m|
+      out.gsub!(/&lt;|&#60;|&gt;|&#62;|&amp;|&#38;/) do |m|
         reserve m
       end
 
@@ -31,7 +31,7 @@ module HtmlPress
     end
   end
 
-  def self.entities_compressor (text)
+  def self.entities_compressor(text)
     Entities.new.minify(text)
   end
 end
